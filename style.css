@@ -139,23 +139,25 @@ nav ul li a:hover::after{
 }
 .work-list{
     display: flex;
-    grid-template-columns: repeat(250px, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
 .work{
     border-radius: 10px;
+    position: relative;
     overflow: hidden;
 }
 .work img{
     width: 100%;
     border-radius: 10px;
     display: block;
+    transition: transform 0.5s;;
 }
-/* .layer{
+.layer{
     width: 100%;
-    height: 100%;
-    background: linear-gradient(#fff,#00BF63);
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6),#00BF63);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -167,4 +169,119 @@ nav ul li a:hover::after{
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
-} */
+    transition: height 0.5s;
+}
+.layer h3{
+    /* font-size: 20px; */
+    /* font-weight: 500;
+    color: #fff; */
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #00BF63;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #00BF63;
+    padding: 10px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #00BF63;
+}
+.contact-left{
+    flex-basis: 50%;
+}
+.contact-right{
+    flex-basis: 40%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #00BF63;
+}
+.contact-right p i{
+    color: #00BF63;
+}
+.social-icons{
+    margin-top: 30px;
+    /* size: 20px; */
+}
+.social-icons a{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transform: transition 0.5s;
+}
+.btn.btn2 {
+    display: inline-block;
+    background: #00BF63;
+}
+
+.social-icons a:hover {
+    color: #00BF63;
+    transform: translateY(-5px);
+}
+
+.contact-right form{
+    width: 100%;
+    /* padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00BF63;
+    outline: none;
+    background: transparent;
+    color: #fff; */
+}
+form input, textarea{
+    width: 120%;
+    height: 120%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer ;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #262626;
+    font-weight: 500;
+    margin-top: 20px;
+}
+nav .fa-solid{
+    display: none;
+}
