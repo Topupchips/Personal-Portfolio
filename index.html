@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ansh Tuli - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7fd0dcc36c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="Header">
@@ -17,7 +18,9 @@
                 <!-- <li><a href="#">Services</a></li> -->
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="Header-Text">
             <h1>Hi, I am <span>Ansh</span>!</h1>
@@ -41,7 +44,7 @@
                         <!-- <p class="tab-links">Certifications</p> -->
                     </div>
                     <div class="tab-contents active-tab" id="Skills">
-                        <ul>
+                        <ul id="sidemenu">
                             <li>HTML</li>
                             <li>Java</li>
                             <li>JavaScript</li>
@@ -101,37 +104,69 @@
             </div>
         </div>
     </div>
-<!-- <div id="Portfolio">
+<div id="Portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
                 <img src="Images/Work-1.png">
                 <div class="layer">
-                <h3>decentralised Web Application</h3>
+                <h3>Decentralised Web Application</h3>
                 <p>HTML, CSS, JavaScript, React, Hedera, Solidity</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                </div>
             </div>
-            </div>
-            <!-- <div class="work">
-                <div class="layer">
+            <div class="work">
                 <img src="Images/Work-2.jpg">
+                <div class="layer">
                 <h3>E-commerce Web Application</h3>
                 <p>HTML, CSS, JavaScript</p>
                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div>
+                </div>
             </div>
             <div class="work">
-                <div class="layer">
                 <img src="Images/Work-3.png">
+                <div class="layer">
                 <h3>TODO Web Application</h3>
                 <p>HTML, CSS, JavaScript</p>
                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </div> -->
+                </div> 
             </div>
         </div>
-    </div> -->
+        <a href="#" class="btn">See more</a>
+    </div> 
+</div>
 
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>anshtuliuni@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+1 437 679 1464</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ansh-tuli-651a60221/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Topupchips"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/anshasorous/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/AnshTuli_"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/anshtuli_/"><i class="fa-brands fa-instagram"></i></i></a>
+                </div>
+                <a href="Ansh Tuli CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email">
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright &copy; Ansh</p>
+    </div>
 </div>
 <script>
     var tabLinks = document.getElementsByClassName("tab-links");
@@ -142,12 +177,21 @@ function opentab(tabname) {
         tablink.classList.remove("active-link");
     }
     for (tabcontent of tabContents) {
-        tabcontent.classList.remove("active-tab"); // Corrected variable name
+        tabcontent.classList.remove("active-tab"); 
     }
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
 
 </script>  
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function openmenu(){
+        sidemenu.style.right="-200px";
+    }
+</script>
 </body>
 </html>
